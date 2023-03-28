@@ -6,7 +6,7 @@ import { AnyObject, Maybe, ObjectSchema, ValidationError } from 'yup';
 
 type TProperty =  'body' | 'query' | 'header' | 'params';
 
-type TGetSchema = <T extends AnyObject | Maybe<AnyObject>>(schema: ObjectSchema<T>) => ObjectSchema<T>;
+type TGetSchema = <T extends Maybe<AnyObject>>(schema: ObjectSchema<T>) => ObjectSchema<T>;
 
 type AllSchema = Record<TProperty, ObjectSchema<any>>
 
